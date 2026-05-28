@@ -1,214 +1,563 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>서버 웜업 리서치 및 기술 인프라 저널</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #3b82f6;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마포 서버 웜업 | 구글 상위노출 대행 - 티어3 PBN</title>
+    <meta name="description" content="마포에서 서버 웜업하는 구글 상위노출 대행. 시스템 폰트로 때려 박고, 3px 보더로 찍어 누른 PBN 사이트. 결과로 말한다. 010-6279-0862로 지금 전화해.">
+    <meta name="keywords" content="구글 상위노출, 구글 상위노출 대행, 마포 서버 웜업, PBN 사이트, 서버 웜업 대행, 티어3 PBN, sf-t3-1779642675702-139">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <link rel="canonical" href="https://sf-t3-1779642675702-139.pages.dev/">
+
+    <meta property="og:title" content="마포 서버 웜업 | 구글 상위노출 대행">
+    <meta property="og:description" content="서버를 열까지 달궈서 구글 상위에 박아버린다. 티어3 PBN, 결과로 증명. 지금 전화 010-6279-0862">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sf-t3-1779642675702-139.pages.dev/">
+    <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'%3E%3Crect width='800' height='400' fill='%23000'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.1em' fill='%23ff3b00' font-family='Impact' font-size='120' font-weight='bold'%3EWARM UP%3C/text%3E%3C/svg%3E">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="마포 서버 웜업 | 구글 상위노출 대행">
+    <meta name="twitter:description" content="서버를 열까지 달궈서 구글 상위에 박아버린다. 티어3 PBN, 결과로 증명.">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "마포 서버 웜업 구글 상위노출 대행",
+        "url": "https://sf-t3-1779642675702-139.pages.dev/",
+        "telephone": "+82-10-6279-0862",
+        "areaServed": {
+            "@type": "City",
+            "name": "마포구"
+        },
+        "description": "서버 웜업 전문 구글 상위노출 대행. 티어3 PBN 네트워크 기반. 시스템 폰트, 3px 보더, 네온 레드로 때려 박는다.",
+        "priceRange": "₩₩₩",
+        "sameAs": [
+            "https://sf-t3-1779642675702-139.pages.dev/"
+        ]
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.7;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    nav { display: flex; gap: 20px; }
-    nav a {
-      color: var(--muted-color);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1.2;
-      letter-spacing: -0.03em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
-      font-weight: 300;
-    }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(59, 130, 246, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
-      margin-bottom: 24px;
-    }
-    .posts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.2s ease;
-    }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted-color);
-    }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
-    }
-  </style>
+    </script>
+
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary: #000000;
+            --secondary: #ffffff;
+            --accent: #ff3b00;
+            --font-stack: Impact, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --mono-stack: 'Courier New', Courier, monospace;
+            --gap: 48px;
+            --padding: 72px;
+            --section-gap: 120px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 18px;
+        }
+
+        body {
+            background-color: var(--primary);
+            color: var(--secondary);
+            font-family: var(--font-stack);
+            font-weight: 400;
+            line-height: 1.2;
+            min-height: 100vh;
+            width: 100%;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ======= base ======= */
+        h1, h2, h3, h4, h5, h6 {
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            font-weight: 700;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 3px solid var(--accent);
+            transition: background 0.15s ease;
+        }
+
+        a:hover, a:focus {
+            background: var(--accent);
+            color: var(--primary);
+            border-bottom-color: var(--secondary);
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            max-width: 72ch;
+            font-family: var(--mono-stack);
+        }
+
+        img, svg {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .full-bleed {
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+        }
+
+        .container {
+            padding-left: var(--padding);
+            padding-right: var(--padding);
+        }
+
+        /* ======= typography ======= */
+        h1 {
+            font-size: clamp(3.5rem, 10vw, 7rem);
+            line-height: 0.85;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            line-height: 0.9;
+            margin-bottom: 0.4rem;
+        }
+
+        h3 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            line-height: 1;
+        }
+
+        /* ======= header & nav ======= */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--primary);
+            border-bottom: 4px solid var(--accent);
+            padding: 24px var(--padding);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            border: none;
+            color: var(--accent);
+            background: none;
+        }
+        .logo:hover, .logo:focus {
+            background: none;
+            color: var(--accent);
+            border: none;
+        }
+
+        .nav-desktop {
+            display: flex;
+            gap: var(--gap);
+            list-style: none;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+        .nav-desktop a {
+            border-bottom-width: 3px;
+            padding: 4px 0;
+        }
+
+        /* hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            background: none;
+            border: none;
+            gap: 8px;
+            padding: 4px;
+        }
+        .hamburger span {
+            display: block;
+            width: 36px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 0;
+        }
+
+        .nav-mobile {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: var(--primary);
+            border-bottom: 4px solid var(--accent);
+            padding: 48px var(--padding);
+            flex-direction: column;
+            gap: 32px;
+            text-align: right;
+        }
+        .nav-mobile.open {
+            display: flex;
+        }
+        .nav-mobile a {
+            font-size: 2.2rem;
+            border-bottom-width: 4px;
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .nav-desktop {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            header {
+                padding: 20px var(--padding);
+            }
+        }
+
+        /* ======= hero ======= */
+        .hero {
+            padding: var(--section-gap) var(--padding) var(--gap);
+            position: relative;
+            overflow: hidden;
+            border-bottom: 4px solid var(--accent);
+            transform: rotate(-0.5deg) translateX(-12px);
+            margin-bottom: 0;
+        }
+        .hero::before {
+            content: '🔥';
+            position: absolute;
+            right: 5%;
+            top: -5%;
+            font-size: 20rem;
+            opacity: 0.08;
+            transform: rotate(15deg);
+        }
+        .hero h1 {
+            margin-left: -0.06em;
+            color: var(--accent);
+            text-shadow: 4px 4px 0 var(--secondary), 8px 8px 0 rgba(255,59,0,0.3);
+        }
+        .hero .subtitle {
+            font-size: clamp(1.4rem, 3vw, 2.2rem);
+            font-family: var(--mono-stack);
+            text-transform: uppercase;
+            border-left: 6px solid var(--accent);
+            padding-left: 24px;
+            margin: 24px 0 48px;
+            transform: skewX(-6deg);
+            display: inline-block;
+        }
+        .hero .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            font-size: 1.8rem;
+            font-weight: 700;
+            padding: 20px 48px;
+            border: 4px solid var(--secondary);
+            text-transform: uppercase;
+            transition: all 0.1s;
+            transform: rotate(1deg);
+            margin-top: 24px;
+        }
+        .hero .cta-button:hover {
+            background: var(--primary);
+            color: var(--accent);
+            border-color: var(--accent);
+            transform: rotate(-1deg) scale(1.02);
+        }
+
+        /* ======= sections ======= */
+        section {
+            padding: var(--section-gap) var(--padding);
+            border-bottom: 4px solid var(--accent);
+            position: relative;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-family: var(--mono-stack);
+            font-size: 0.9rem;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 8px 20px;
+            margin-bottom: 32px;
+            border: 3px solid var(--secondary);
+            transform: skewX(-8deg);
+            letter-spacing: 0.1em;
+        }
+
+        .grid-asymmetric {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: var(--gap);
+            margin-top: 48px;
+        }
+        .grid-asymmetric > * {
+            border: 4px solid var(--secondary);
+            padding: 36px 24px;
+            transform: rotate(0.4deg);
+            background: rgba(255,255,255,0.02);
+        }
+        .grid-asymmetric > *:nth-child(2) {
+            transform: rotate(-0.8deg) translateY(24px);
+        }
+        .grid-asymmetric > *:nth-child(3) {
+            transform: rotate(0.6deg) translateY(-12px);
+        }
+
+        @media (max-width: 768px) {
+            .grid-asymmetric {
+                grid-template-columns: 1fr;
+            }
+            .grid-asymmetric > * {
+                transform: none !important;
+                margin-top: 0;
+            }
+        }
+
+        .stat-block {
+            display: flex;
+            gap: 12px;
+            margin: 24px 0;
+            flex-wrap: wrap;
+        }
+        .stat-item {
+            background: var(--primary);
+            border: 4px solid var(--accent);
+            padding: 16px 24px;
+            font-family: var(--mono-stack);
+            flex: 1 1 180px;
+            transform: skewX(-2deg);
+        }
+        .stat-item strong {
+            font-size: 2rem;
+            display: block;
+            color: var(--accent);
+        }
+
+        /* ======= reviews ======= */
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 48px;
+            margin-top: 48px;
+        }
+        .review-card {
+            border: 4px solid var(--secondary);
+            padding: 36px 28px;
+            background: rgba(255,255,255,0.01);
+            position: relative;
+            transform: rotate(var(--rot, 0deg)) translateY(var(--y, 0));
+            transition: transform 0.2s;
+        }
+        .review-card:hover {
+            transform: rotate(0deg) translateY(-8px) scale(1.02);
+            border-color: var(--accent);
+        }
+        .review-card:nth-child(odd) { --rot: -1deg; --y: 8px; }
+        .review-card:nth-child(even) { --rot: 1.5deg; --y: -12px; }
+        .review-card .stars {
+            color: var(--accent);
+            font-size: 1.6rem;
+            letter-spacing: 4px;
+        }
+        .review-card .meta {
+            font-family: var(--mono-stack);
+            font-size: 0.85rem;
+            margin: 12px 0;
+            opacity: 0.7;
+            border-top: 2px solid var(--accent);
+            padding-top: 12px;
+        }
+        .review-card blockquote {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            border-left: 4px solid var(--accent);
+            padding-left: 16px;
+            margin: 16px 0 0;
+            font-family: var(--mono-stack);
+        }
+
+        /* ======= footer ======= */
+        footer {
+            padding: 64px var(--padding) 48px;
+            border-top: 4px solid var(--accent);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 32px;
+        }
+        footer .phone a {
+            font-size: 1.6rem;
+            border-bottom-width: 4px;
+            font-weight: 700;
+        }
+        footer .copy {
+            font-family: var(--mono-stack);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* ======= misc ======= */
+        .skew-box {
+            display: inline-block;
+            transform: skewX(-6deg);
+            border: 4px solid var(--accent);
+            padding: 8px 24px;
+            background: var(--primary);
+        }
+
+        .text-accent {
+            color: var(--accent);
+        }
+
+        hr {
+            border: none;
+            border-top: 4px solid var(--accent);
+            margin: 48px 0;
+            width: 100%;
+        }
+
+        /* responsive fine-tune */
+        @media (max-width: 768px) {
+            :root {
+                --padding: 24px;
+                --gap: 24px;
+                --section-gap: 80px;
+            }
+            h1 {
+                font-size: 3.2rem;
+            }
+            .hero {
+                transform: none;
+            }
+            .hero .subtitle {
+                transform: none;
+                border-left-width: 4px;
+                padding-left: 16px;
+            }
+            .hero .cta-button {
+                font-size: 1.4rem;
+                padding: 16px 32px;
+                transform: none;
+            }
+            .stat-item {
+                flex: 1 1 100%;
+            }
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
     <header>
-      <a href="/" class="logo">T3.SWISS</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
+        <a href="/" class="logo">🔥 WARMUP</a>
+        <nav>
+            <ul class="nav-desktop">
+                <li><a href="#what">무엇</a></li>
+                <li><a href="#how">방식</a></li>
+                <li><a href="#reviews">증명</a></li>
+                <li><a href="tel:+821062790862">전화</a></li>
+            </ul>
+            <button class="hamburger" aria-label="메뉴 열기" onclick="document.getElementById('navMobile').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-mobile" id="navMobile">
+                <a href="#what" onclick="document.getElementById('navMobile').classList.remove('open')">무엇</a>
+                <a href="#how" onclick="document.getElementById('navMobile').classList.remove('open')">방식</a>
+                <a href="#reviews" onclick="document.getElementById('navMobile').classList.remove('open')">증명</a>
+                <a href="tel:+821062790862" onclick="document.getElementById('navMobile').classList.remove('open')">전화</a>
+            </div>
+        </nav>
     </header>
+
     <main>
-      <div class="meta-tag">SWISS ACCENTED GRID SYSTEM</div>
-      <h1>서버 웜업 리서치 및 기술 인프라 저널</h1>
-      <div class="content">
-        환영합니다. 본 블로그 저널은 현대적이고 세련된 <strong>서버 웜업</strong> 분야의 실용 정보와 심도 있는 기술 에세이를 기록하는 전문 아카이브 공간입니다. 아래의 엄선된 아티클 리스트를 통해 다양한 인사이트를 확인하시기 바랍니다.
-      </div>
-      
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-        <a href="posts/normal-1.html" class="post-card">
-          <h3>서버 웜업: 서버 웜업: IP 신뢰도를 높이는 기술</h3>
-          <p>새로 할당받은 IP 평판을 신뢰할 수 있는 수준으로 안전하게 올리기 위해 발송량을 단계별로 제어하는 웜업 가이드는 이메일 및 대량 인프라 솔루션 구동의 초석입니다. 스팸 차단 시스...</p>
-        </a>
-      
+        <!-- HERO -->
+        <section class="hero" aria-label="히어로">
+            <h1>서버를<br>달군다</h1>
+            <span class="subtitle">마포∙서버워밍업∙구글상위노출대행</span>
+            <p style="font-size:1.2rem;">티어3 PBN. 시스템 폰트로 때려 박고 3px 보더로 찍어 누른다.<br>결과로 말한다. 너의 검색 순위, 이제 내가 웜업한다.</p>
+            <a href="tel:+821062790862" class="cta-button">📞 010-6279-0862 지금 전화</a>
+            <div style="margin-top:48px; border-left:6px solid var(--accent); padding-left:24px;">
+                <span style="font-family:var(--mono-stack);">#PBN #티어3 #서버워밍업 #구글상위노출 #마포</span>
+            </div>
+        </section>
 
-        <a href="posts/normal-2.html" class="post-card">
-          <h3>서버 웜업: 서버 웜업: 메일 인프라 빌드 요령</h3>
-          <p>완벽한 이메일 발송 인프라 구축의 기본은 SPF, DKIM, DMARC 등의 인증 방식 DNS 레코드를 철저히 셋업하는 일입니다. 인증이 누락되면 아무리 정밀하게 웜업을 진행하더라...</p>
-        </a>
-      
+        <!-- WHAT -->
+        <section id="what">
+            <span class="section-label">🔥 무엇을 하냐면</span>
+            <h2>서버 웜업 + 구글 상위노출 대행</h2>
+            <div class="grid-asymmetric">
+                <div>
+                    <h3 style="font-size:2rem; margin-bottom:24px;">서버 웜업</h3>
+                    <p>서버가 차갑게 식어 있으면 검색 엔진이 무시한다. 우리는 서버를 열까지 달군다. 시스템 리소스부터 응답 시간까지, 모든 파라미터를 최적화해서 구글 봇이 ‘와, 이 사이트는 진짜다’라고 느끼게 만든다.</p>
+                    <div class="stat-block">
+                        <div class="stat-item"><strong>47%</strong> 서버 응답 개선</div>
+                        <div class="stat-item"><strong>3.2x</strong> 인덱싱 속도</div>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="font-size:2rem; margin-bottom:24px;">PBN 네트워크</h3>
+                    <p>티어3 PBN. 허튼 말 하지 않는다. 우리가 직접 구축한 네트워크로 백링크를 박아 넣는다. 핑크빛 링크 아닌, 뼈 있는 링크.</p>
+                    <div style="margin-top:24px; border:3px solid var(--accent); padding:16px; font-family:var(--mono-stack);">
+                        <span>사이트: sf-t3-1779642675702-139.pages.dev</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="font-size:2rem; margin-bottom:24px;">구글 상위노출</h3>
+                    <p>복잡한 SEO 이론은 집어치워. 우리는 결과만 본다. 상위 3페이지에 없다면, 우리가 직접 상위로 끌어올린다. 마포에서 시작해 전국으로.</p>
+                    <div style="margin-top:24px;">
+                        <span class="skew-box">📈 평균 11위 → 2.4위</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <a href="posts/normal-3.html" class="post-card">
-          <h3>서버 웜업: 서버 웜업: 트래픽 제어 시스템 구축</h3>
-          <p>인프라 엔지니어들이 가장 자주 실수하는 것은 트래픽 서지 제어를 누락하는 것입니다. 웜업 기간에는 로컬 큐에 메일이 쌓이지 않도록 주기적으로 쓰로틀링(Throttling)을 걸어 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="post-card">
-          <h3>서버 웜업 마니아들에게 강력 추천하는 구글 상위노출 대행 알짜배기 리스트</h3>
-          <p>이메일 대량 발송 서버 웜업을 진행하면서 도달률의 기술적 균형점을 분석하다 보면, 결국 강력하고 독보적인 성과 전이를 위해 최신 트렌드를 파악하는 안목의 중요성을 체감하게 됩니다....</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="post-card">
-          <h3>서버 웜업 마니아들에게 강력 추천하는 구글 상위노출 대행 알짜배기 리스트</h3>
-          <p>이메일 대량 발송 서버 웜업을 진행하면서 도달률의 기술적 균형점을 분석하다 보면, 결국 강력하고 독보적인 성과 전이를 위해 최신 트렌드를 파악하는 안목의 중요성을 체감하게 됩니다....</p>
-        </a>
-      
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 T3.SWISS. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
-    </footer>
-  </div>
+        <!-- HOW -->
+        <section id="how">
+            <span class="section-label">⚙️ 방식</span>
+            <h2>우리가 하는 방식</h2>
+            <p style="font-size:1.3rem; max-width:90%;">거기 앉아서 ‘SEO 전문가’ 타령하는 애들 말고, 우리는 손에 피를 묻히고 서버를 직접 만진다.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:48px; margin-top:48px;">
+                <div style="flex:1; min-width:220px; border:3px solid var(--secondary); padding:32px 24px; transform:rotate(-0.6deg);">
+                    <span style="font-size:3rem;">01</span>
+                    <h3 style="margin:16px 0;">서버 진단</h3>
+                    <p>TTFB, 헤더, 캐싱 전략, 모든 것을 분석한다. 문제 찾으면 바로 고친다.</p>
+                </div>
+                <div style="flex:1; min-width:220px; border:3px solid var(--secondary); padding:32px 24px; transform:rotate(0.8deg) translateY(16px);">
+                    <span style="font-size:3rem;">02</span>
+                    <h3 style="margin:16px 0;">워밍업</h3>
+                    <p>서버에 부하를 걸고, 응답을 최적화하고, 구글 봇이 좋아할 환경을 만든다.</p>
+                </div>
+                <div style="flex:1; min-width:220px; border:3px solid var(--secondary); padding:32px 24px; transform:rotate(-0.4deg) translateY(-8px);">
+                    <span style="font-size:3rem;">03</span>
+                    <h3 style="margin:16px 0;">링크 구축</h3>
+                    <p>티어3 PBN 네트워크로 강력한 백링크를 확보한다. 가짜 아님, 진짜 사이트에서.</p>
+                </div>
+                <div style="flex:1; min-width:220px; border:3px solid var(--secondary); padding:32px 24px; transform:rotate(0.2deg);">
+                    <span style="font-size:3rem;">04</span>
+                    <h3 style="margin:16px 0;">모니터링</h3>
+                    <p>순위, 트래픽, 인덱싱. 24시간 감시하고 문제 생기면 즉시 대응.</p>
+                </div>
+            </div>
+            <hr>
+            <div style="border:4px solid var(--accent); padding:48px; margin-top:48px; background:rgba(255,59,0,0.05);">
+                <span style="font-size:1.2rem; font-family:var(--mono-stack);">“구글 상위노출 대행, 마포에서 서버 웜업하는 곳은 단 하나뿐이다.”</span>
+            </div
 </body>
 </html>
