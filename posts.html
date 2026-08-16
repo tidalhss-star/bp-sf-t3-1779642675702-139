@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/3) · sf-t3-1779642675702-139</title>
+  <meta name="description" content="sf-t3-1779642675702-139에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://sf-t3-1779642675702-139.maphoshirts.com/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ *, *::before, *::after {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ }
+
+ :root {
+ --primary: #000000;
+ --secondary: #ffffff;
+ --accent: #ff3b00;
+ --font-stack: Impact, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+ --mono-stack: 'Courier New', Courier, monospace;
+ --gap: 48px;
+ --padding: 72px;
+ --section-gap: 120px;
+ }
+
+ html {
+ scroll-behavior: smooth;
+ font-size: 18px;
+ }
+
+ body {
+ background-color: var(--primary);
+ color: var(--secondary);
+ font-family: var(--font-stack);
+ font-weight: 400;
+ line-height: 1.2;
+ min-height: 100vh;
+ width: 100%;
+ overflow-x: hidden;
+ margin: 0;
+ padding: 0;
+ }
+
+ /* ======= base ======= */
+ h1, h2, h3, h4, h5, h6 {
+ text-transform: uppercase;
+ letter-spacing: -0.02em;
+ font-weight: 700;
+ }
+
+ a {
+ color: inherit;
+ text-decoration: none;
+ border-bottom: 3px solid var(--accent);
+ transition: background 0.15s ease;
+ }
+
+ a:hover, a:focus {
+ background: var(--accent);
+ color: var(--primary);
+ border-bottom-color: var(--secondary);
+ }
+
+ p {
+ margin-bottom: 1.2rem;
+ max-width: 72ch;
+ font-family: var(--mono-stack);
+ }
+
+ img, svg {
+ display: block;
+ max-width: 100%;
+ height: auto;
+ }
+
+ .full-bleed {
+ width: 100vw;
+ margin-left: calc(-50vw + 50%);
+ }
+
+ .container {
+ padding-left: var(--padding);
+ padding-right: var(--padding);
+ }
+
+ /* ======= typography ======= */
+ h1 {
+ font-size: clamp(3.5rem, 10vw, 7rem);
+ line-height: 0.85;
+ margin-bottom: 0.5rem;
+ }
+
+ h2 {
+ font-size: clamp(2.5rem, 7vw, 4.5rem);
+ line-height: 0.9;
+ margin-bottom: 0.4rem;
+ }
+
+ h3 {
+ font-size: clamp(1.8rem, 4vw, 2.8rem);
+ line-height: 1;
+ }
+
+ /* ======= header & nav ======= */
+ header {
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ background: var(--primary);
+ border-bottom: 4px solid var(--accent);
+ padding: 24px var(--padding);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+
+ .logo {
+ font-size: 1.8rem;
+ font-weight: 700;
+ letter-spacing: -0.04em;
+ border: none;
+ color: var(--accent);
+ background: none;
+ }
+ .logo:hover, .logo:focus {
+ background: none;
+ color: var(--accent);
+ border: none;
+ }
+
+ .nav-desktop {
+ display: flex;
+ gap: var(--gap);
+ list-style: none;
+ font-size: 1.2rem;
+ text-transform: uppercase;
+ }
+ .nav-desktop a {
+ border-bottom-width: 3px;
+ padding: 4px 0;
+ }
+
+ /* hamburger */
+ .hamburger {
+ display: none;
+ flex-direction: column;
+ cursor: pointer;
+ background: none;
+ border: none;
+ gap: 8px;
+ padding: 4px;
+ }
+ .hamburger span {
+ display: block;
+ width: 36px;
+ height: 4px;
+ background: var(--secondary);
+ border-radius: 0;
+ }
+
+ .nav-mobile {
+ display: none;
+ position: absolute;
+ top: 100%;
+ left: 0;
+ width: 100%;
+ background: var(--primary);
+ border-bottom: 4px solid var(--accent);
+ padding: 48px var(--padding);
+ flex-direction: column;
+ gap: 32px;
+ text-align: right;
+ }
+ .nav-mobile.open {
+ display: flex;
+ }
+ .nav-mobile a {
+ font-size: 2.2rem;
+ border-bottom-width: 4px;
+ display: inline-block;
+ }
+
+ @media (max-width: 768px) {
+ .nav-desktop {
+ display: none;
+ }
+ .hamburger {
+ display: flex;
+ }
+ header {
+ padding: 20px var(--padding);
+ }
+ }
+
+ /* ======= hero ======= */
+ .hero {
+ padding: var(--section-gap) var(--padding) var(--gap);
+ position: relative;
+ overflow: hidden;
+ border-bottom: 4px solid var(--accent);
+ transform: rotate(-0.5deg) translateX(-12px);
+ margin-bottom: 0;
+ }
+ .hero::before {
+ content: '🔥';
+ position: absolute;
+ right: 5%;
+ top: -5%;
+ font-size: 20rem;
+ opacity: 0.08;
+ transform: rotate(15deg);
+ }
+ .hero h1 {
+ margin-left: -0.06em;
+ color: var(--accent);
+ text-shadow: 4px 4px 0 var(--secondary), 8px 8px 0 rgba(255,59,0,0.3);
+ }
+ .hero .subtitle {
+ font-size: clamp(1.4rem, 3vw, 2.2rem);
+ font-family: var(--mono-stack);
+ text-transform: uppercase;
+ border-left: 6px solid var(--accent);
+ padding-left: 24px;
+ margin: 24px 0 48px;
+ transform: skewX(-6deg);
+ display: inline-block;
+ }
+ .hero .cta-button {
+ display: inline-block;
+ background: var(--accent);
+ color: var(--primary);
+ font-size: 1.8rem;
+ font-weight: 700;
+ padding: 20px 48px;
+ border: 4px solid var(--secondary);
+ text-transform: uppercase;
+ transition: all 0.1s;
+ transform: rotate(1deg);
+ margin-top: 24px;
+ }
+ .hero .cta-button:hover {
+ background: var(--primary);
+ color: var(--accent);
+ border-color: var(--accent);
+ transform: rotate(-1deg) scale(1.02);
+ }
+
+ /* ======= sections ======= */
+ section {
+ padding: var(--section-gap) var(--padding);
+ border-bottom: 4px solid var(--accent);
+ position: relative;
+ }
+
+ .section-label {
+ display: inline-block;
+ font-family: var(--mono-stack);
+ font-size: 0.9rem;
+ background: var(--accent);
+ color: var(--primary);
+ padding: 8px 20px;
+ margin-bottom: 32px;
+ border: 3px solid var(--secondary);
+ transform: skewX(-8deg);
+ letter-spacing: 0.1em;
+ }
+
+ .grid-asymmetric {
+ display: grid;
+ grid-template-columns: 2fr 1fr 1fr;
+ gap: var(--gap);
+ margin-top: 48px;
+ }
+ .grid-asymmetric > * {
+ border: 4px solid var(--secondary);
+ padding: 36px 24px;
+ transform: rotate(0.4deg);
+ background: rgba(255,255,255,0.02);
+ }
+ .grid-asymmetric > *:nth-child(2) {
+ transform: rotate(-0.8deg) translateY(24px);
+ }
+ .grid-asymmetric > *:nth-child(3) {
+ transform: rotate(0.6deg) translateY(-12px);
+ }
+
+ @media (max-width: 768px) {
+ .grid-asymmetric {
+ grid-template-columns: 1fr;
+ }
+ .grid-asymmetric > * {
+ transform: none !important;
+ margin-top: 0;
+ }
+ }
+
+ .stat-block {
+ display: flex;
+ gap: 12px;
+ margin: 24px 0;
+ flex-wrap: wrap;
+ }
+ .stat-item {
+ background: var(--primary);
+ border: 4px solid var(--accent);
+ padding: 16px 24px;
+ font-family: var(--mono-stack);
+ flex: 1 1 180px;
+ transform: skewX(-2deg);
+ }
+ .stat-item strong {
+ font-size: 2rem;
+ display: block;
+ color: var(--accent);
+ }
+
+ /* ======= reviews ======= */
+ .review-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 48px;
+ margin-top: 48px;
+ }
+ .review-card {
+ border: 4px solid var(--secondary);
+ padding: 36px 28px;
+ background: rgba(255,255,255,0.01);
+ position: relative;
+ transform: rotate(var(--rot, 0deg)) translateY(var(--y, 0));
+ transition: transform 0.2s;
+ }
+ .review-card:hover {
+ transform: rotate(0deg) translateY(-8px) scale(1.02);
+ border-color: var(--accent);
+ }
+ .review-card:nth-child(odd) { --rot: -1deg; --y: 8px; }
+ .review-card:nth-child(even) { --rot: 1.5deg; --y: -12px; }
+ .review-card .stars {
+ color: var(--accent);
+ font-size: 1.6rem;
+ letter-spacing: 4px;
+ }
+ .review-card .meta {
+ font-family: var(--mono-stack);
+ font-size: 0.85rem;
+ margin: 12px 0;
+ opacity: 0.7;
+ border-top: 2px solid var(--accent);
+ padding-top: 12px;
+ }
+ .review-card blockquote {
+ font-size: 1.1rem;
+ line-height: 1.4;
+ border-left: 4px solid var(--accent);
+ padding-left: 16px;
+ margin: 16px 0 0;
+ font-family: var(--mono-stack);
+ }
+
+ /* ======= footer ======= */
+ footer {
+ padding: 64px var(--padding) 48px;
+ border-top: 4px solid var(--accent);
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ align-items: center;
+ gap: 32px;
+ }
+ footer .phone a {
+ font-size: 1.6rem;
+ border-bottom-width: 4px;
+ font-weight: 700;
+ }
+ footer .copy {
+ font-family: var(--mono-stack);
+ font-size: 0.9rem;
+ opacity: 0.7;
+ }
+
+ /* ======= misc ======= */
+ .skew-box {
+ display: inline-block;
+ transform: skewX(-6deg);
+ border: 4px solid var(--accent);
+ padding: 8px 24px;
+ background: var(--primary);
+ }
+
+ .text-accent {
+ color: var(--accent);
+ }
+
+ hr {
+ border: none;
+ border-top: 4px solid var(--accent);
+ margin: 48px 0;
+ width: 100%;
+ }
+
+ /* responsive fine-tune */
+ @media (max-width: 768px) {
+ :root {
+ --padding: 24px;
+ --gap: 24px;
+ --section-gap: 80px;
+ }
+ h1 {
+ font-size: 3.2rem;
+ }
+ .hero {
+ transform: none;
+ }
+ .hero .subtitle {
+ transform: none;
+ border-left-width: 4px;
+ padding-left: 16px;
+ }
+ .hero .cta-button {
+ font-size: 1.4rem;
+ padding: 16px 32px;
+ transform: none;
+ }
+ .stat-item {
+ flex: 1 1 100%;
+ }
+ footer {
+ flex-direction: column;
+ text-align: center;
+ }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (1/3) · sf-t3-1779642675702-139">
+  <meta property="og:description" content="sf-t3-1779642675702-139에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://sf-t3-1779642675702-139.maphoshirts.com/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <a href="/" class="logo">🔥 WARMUP</a>
+ <nav>
+ <ul class="nav-desktop">
+ <li><a href="#what">무엇</a></li>
+ <li><a href="#how">방식</a></li>
+ <li><a href="#reviews">증명</a></li>
+ 
+ </ul>
+ <button class="hamburger" aria-label="메뉴 열기" onclick="document.getElementById('navMobile').classList.toggle('open')">
+ 
+ </button>
+ <div class="nav-mobile" id="navMobile">
+ <a href="#what" onclick="document.getElementById('navMobile').classList.remove('open')">무엇</a>
+ <a href="#how" onclick="document.getElementById('navMobile').classList.remove('open')">방식</a>
+ <a href="#reviews" onclick="document.getElementById('navMobile').classList.remove('open')">증명</a>
+ 
+ </div>
+ </nav>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 42개 · 1/3 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/checklist-001-1hol34k.html">구글 상위노출 대행 선택 전에 확인할 체크리스트와 실패 사례</a>
+        <p class="post-item__summary">아, 진짜.. 2023년 겨울, 서버실 온도가 평균보다 45도까지 오르면서 제 컴퓨터 화면이 빛나는 밤을 보내던 저였습니다. 갑작스런 기온 변동으로 인해 시스템이 멈췄고, 다행히 나무 열매를 분석하</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/checklist-001-jcsjz3.html">구글 상위노출 대행</a>
+        <p class="post-item__summary">서버 웜업은 새로운 도메인이나 서버 환경에서 이메일 발송 신뢰도를 높이기 위해 필수적인 과정입니다. 마포 지역에서 디지털 마케팅을 진행하는 기업들은 자사의 서버가 스팸 메일함으로 분류되지 않도록 최</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/checklist-002-i5vwyj.html">구글 상위노출 대행 선택 전에 확인할 체크리스트와 실패 사례</a>
+        <p class="post-item__summary">마포 지역에서 운영하는 서버 웜업 서비스가 구글 검색 결과 상단에 위치하기 위해서는 체계적인 접근이 필수적입니다. 단순히 노출만을 강조하는 대행사를 찾기보다는 서비스의 전문성을 명확히 전달할 수 있</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/compare-001-1cwzwlw.html">구글 상위노출 대행</a>
+        <p class="post-item__summary">온라인 환경에서 검색 결과의 상단에 위치하는 것은 마케팅의 성패를 좌우하는 핵심 요소입니다. 특히 기술적인 정교함이 요구되는 서버 웜업 분야에서는 검색 엔진 최적화가 필수적입니다. 마포 지역을 기반</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/compare-002-1gvjcqr.html">구글 상위노출 대행 vs 구글 상위노출 대행 비교</a>
+        <p class="post-item__summary">마포 지역에서 서버 웜업 서비스를 운영하며 온라인 시장에서의 입지를 넓히기 위해 고민하는 대표님들이 많습니다. 특히 구글 검색 결과에서 우리 업체의 웹사이트가 상단에 노출되는 것은 브랜드 인지도와 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-1394.html">구글 상위노출 대행 선택 전에 보는 셔츠룸 사이트 체크포인트</a>
+        <p class="post-item__summary">마포의 구글 상위노출 대행를 비교할 때 가장 피해야 할 것은 한 문장짜리 홍보 문구만 믿는 일입니다. 실제로 도움이 되는 글은 조건을 나누고, 읽는 사람이 스스로 판단할 여지를 남깁니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0382.html">구글 상위노출 대행으로 마포에서 차별화된 SEO 전략 구축하기</a>
+        <p class="post-item__summary">구글 상위노출 대행은 빠르게 결과를 원할 때 가장 선택하는 방법입니다. 효율적인 키워드 분석과 콘텐츠 최적화만으로도 높은 순위를 확보할 수 있죠.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0383.html">마포에서 구글 상위노출 대행이 필요한 진짜 이유</a>
+        <p class="post-item__summary">검색 엔진 최적화는 단순히 키워드를 페이지에 채워 넣는 작업이 아니다. 특히 경쟁이 치열한 업종일수록 기술적 SEO와 콘텐츠 전략, 그리고 안정적인 링크 프로파일이 유기적으로 결합되어야 한다. 마포</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0384.html">구글 상위노출 대행으로 마포 기업의 온라인 영향력 확대</a>
+        <p class="post-item__summary">구글 상위노출 대행은 검색 엔진을 통해 홈페이지를 빠르게 찾는 데 핵심적인 역할을 합니다. 서비스 업체와 소통하며 키워드 분석부터 최적화까지 일련의 과정을 수행합니다. 마포 지역의 중소기업도 이 서</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0385.html">마포 서버 웜업 업계, 구글 상위노출 대행 도입으로 디지털 전환 가속</a>
+        <p class="post-item__summary">마포 지역에서 서버 웜업 서비스를 운영하는 업체들이 디지털 마케팅에 본격적으로 나서고 있다. 기존에는 오프라인 네트워크와 기존 고객 의존도가 높았지만, 최근 경쟁이 심화되면서 구글 상위노출 대행 서</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0386.html">구글 상위노출 대행으로 마포 지역 비즈니스 성장하기</a>
+        <p class="post-item__summary">마포의 소상공인들이 주로 마주하는 경영상의 난제 중 하나는 온라인 검색에서 눈에 띄지 못하는 점이다. 최근 구글 검색 결과 페이지에서 상위에 노출되는 것은 고객 유입에 결정적인 영향을 미치는 핵심 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0387.html">구글 상위노출 대행, 서버 안정성이 성패를 가른다</a>
+        <p class="post-item__summary">마포 지역에서 구글 상위노출 대행 서비스를 선택할 때 간과하기 쉬운 요소가 있다. 바로 서버 웜업이다. 아무리 좋은 콘텐츠와 백링크를 확보해도 서버 응답 속도가 느리면 구글의 평가는 기대에 미치지 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0388.html">마포에서 시작하는 구글 상위노출 대행, 서버 웜업으로 비즈니스 성장</a>
+        <p class="post-item__summary">마포의 작은 마켓에서도 구글 검색을 통해 비즈니스를 확장하고 싶다면, 전문적인 구글 상위노출 대행이 필수입니다. 우리는 사이트의 서버 웜업부터 시작해 검색엔진 알고리즘에 최적화된 컨텐츠를 통해 자연</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0389.html">마포 지역 서버 웜업과 구글 상위노출 대행의 관계</a>
+        <p class="post-item__summary">구글 검색 결과에서 상위권에 오르기 위해서는 단순히 콘텐츠를 잘 작성하는 것만으로는 부족합니다. 검색 엔진이 사이트를 어떻게 인식하고 평가하는지에 대한 전략적 접근이 필요하며, 특히 기술적인 요소들</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0390.html">구글 상위노출 대행으로 마포에서 돋보이는 비즈니스 전략</a>
+        <p class="post-item__summary">구글 상위노출 대행은 마포 지역의 중소기업에게 매출 상승의 핵심 도구입니다. 게속되는 검색 노출이 결정적이라면, 전문 업체와의 협력이 필수적입니다. 특히 마포의 창업 파이프라인이 활발히 움직이는 현</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0391.html">마포 지역 업소를 위한 구글 상위노출 대행과 서버 웜업 전략</a>
+        <p class="post-item__summary">서버 웜업은 신규 웹사이트가 검색 엔진에 등록된 후 일정 기간 동안 트래픽을 안정적으로 유지하며 방문 지표를 쌓아가는 과정입니다. 검색 엔진은 일정 기간의 방문 패턴과 사용자 반응을 분석한 후에야 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0392.html">구글 상위노출 대행으로 마포 비즈니스 성장 원칙</a>
+        <p class="post-item__summary">구글 상위노출 대행은 단순한 키워드 연구보다, 지속적인 품질 관리와 체계적인 백링크 전략이 필요합니다. 마포 지역에서 운영되는 본 사무소는 현지 비즈니스와 연계해 중소기업이 빠르게 검색 결과에 노출</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0393.html">마포 맞춤 구글 상위노출 대행, 인프라 최적화로 차별화하다</a>
+        <p class="post-item__summary">마포 지역에서 구글 상위노출 대행 서비스를 찾는 업체들이 꾸준히 늘고 있다. 홍대와 합정, 상수 일대는 물론 마포 전역에서 온라인 가시성 확보가 곧 매출로 이어지기 때문이다. 키워드만 나열하는 과거</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0314.html">구글 상위노출 대행 업체 선정과 마포 럭셔리 단체 가라오케 예약 가이드</a>
+        <p class="post-item__summary">흔히 구글 상위노출 대행 서비스를 단순히 단기적인 유입만을 목적으로 한다고 오해하는 경우가 많습니다. 그러나 진정한 성과는 사용자의 만족도와 검색 의도에 최적화된 콘텐츠의 질에서 결정됩니다. 본질을</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0315.html">구글 상위노출 대행 기술과 구글 알고리즘 고신용 도메인 보증 카드 발급 절차</a>
+        <p class="post-item__summary">검색 엔진의 상단에 웹사이트를 안착시키기 위해서는 몇 가지 필수적인 충족 조건이 요구됩니다. 기술적 신뢰도와 사용자 중심의 콘텐츠 구성은 기본이며, 도메인의 공신력이 성장의 핵심으로 작용합니다. 이</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+      <a class="pager__link" href="posts-3.html">3</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
